@@ -113,6 +113,7 @@ export const headMoneyColumns = [
   c('announced', 'Date Announced', '130px'),
   c('namePS', 'Police Station', '120px'),
   sc('status', 'Status', '110px'),
+  c('remarks', 'Remarks', '200px'),
 ]
 
 export const headMoneyData = [
@@ -127,7 +128,11 @@ export const headMoneyData = [
   { id: 9,  name: 'Shah Nawaz',         fatherName: 'Bahadar Khan',   caste: 'Karki Khel', address: 'Gul Imam',     crime: 'Murder + Dacoity u/s 302/412',     firNo: '99 dat 03/03/2013', reward: '750,000',   announced: '15/04/2013', namePS: 'Gul Imam', status: 'Absconder'  },
   { id: 10, name: 'Pervaiz Khan',       fatherName: 'Wahid Khan',     caste: 'Shadi Khel', address: 'Nasran',       crime: 'Kidnapping u/s 365-A PPC',         firNo: '14 dat 19/05/2015', reward: '1,000,000', announced: '01/06/2015', namePS: 'SMA',      status: 'Active'     },
   { id: 11, name: 'Habib Ur Rehman',    fatherName: 'Noor Khan',      caste: 'Nasar',      address: 'Nasran',       crime: 'Murder u/s 302 PPC',               firNo: '188 dat 27/08/2012', reward: '500,000',  announced: '05/10/2012', namePS: 'SMA Tank', status: 'Active'     },
-  { id: 12, name: 'Jawad Ullah',        fatherName: 'Jalal Khan',     caste: 'Bhittani',   address: 'Kirri Haider', crime: 'Terrorism + Murder u/s 7-ATA/302', firNo: '61 dat 15/02/2016', reward: '1,500,000', announced: '01/03/2016', namePS: 'SMA',      status: 'Under Trial'},
+  { id: 12, name: 'Jawad Ullah',                    fatherName: 'Jalal Khan',     caste: 'Bhittani',   address: 'Kirri Haider', crime: 'Terrorism + Murder u/s 7-ATA/302',                                                  firNo: '61 dat 15/02/2016',                                                                                                   reward: '1,500,000',  announced: '01/03/2016', namePS: 'SMA',       status: 'Under Trial', remarks: '' },
+  { id: 13, name: 'Molvi Abdul Baseer',             fatherName: 'Din Muhammad',   caste: 'Battani',    address: 'Kirri Marwati',crime: 'Terrorism u/s 302-324-353-10-20B-427-148-149-3/4ESA-7ATA',                               firNo: 'FIR No 73 dat 22-05-2023 u/s 302-324-353-10-20B-427-148-149-3/4ESA-7ATA PS CTD DIK',   reward: '9,000,000',  announced: '—',         namePS: 'CTD DIKhan', status: 'Active',      remarks: 'Owner of Molvi Baseer Bittani Group; Declared PO; Listed in 4th Schedule' },
+  { id: 14, name: 'Commander Molvie Daud',          fatherName: 'Makin Khan',     caste: 'Battani',    address: 'Kari Umar Khan',crime: 'Terrorism u/s 302-324-353-3/4ESA-7ATA',                                                  firNo: 'FIR No 63 dat 29.09.2021 u/s 302-324-353-148-149-15AA-5ESA-7ATA PS CTD DIKhan',         reward: '10,000,000', announced: '—',         namePS: 'CTD DIKhan', status: 'Active',      remarks: 'Owner of Mansoori Karwan (Daud Bittani Group); Declared PO; Listed in 4th Schedule' },
+  { id: 15, name: 'Gulamat @ Javed @ Mukhlis Qari', fatherName: 'Malay Khan',    caste: 'Battani',    address: 'Dabak Kala',   crime: 'Terrorism u/s 302-324-353-7ATA, multiple FIRs',                                           firNo: 'FIR No 35 dat 30.03.2022 u/s 302-324-353-15AA-4/5ESA-7ATA PS CTD DIKhan',               reward: '6,000,000',  announced: '—',         namePS: 'CTD DIKhan', status: 'Active',      remarks: 'Mansoori Karwan (Daud Bittani Group); Declared PO; Listed in 4th Schedule' },
+  { id: 16, name: 'Kalim Ullah @ Usman',            fatherName: 'Salam Gul',     caste: 'Battani',    address: 'Gara Budah',   crime: 'Terrorism u/s 302-324-353-365A-387-3/4ESA-7ATA',                                          firNo: 'FIR No 30 dat 14-09-2019 u/s 365A-387-7HATA PS CTD DIK',                                reward: '6,000,000',  announced: '—',         namePS: 'CTD DIKhan', status: 'Active',      remarks: 'Baseer Bittani Group; Declared PO; Listed in 4th Schedule' },
 ]
 
 // ─────────────────────────────────────────────
@@ -141,11 +146,13 @@ export const fourthScheduleColumns = [
   c('address', 'Address', '130px'),
   c('cnic', 'CNIC', '140px'),
   c('section', 'Section', '140px'),
-  c('dateEntered', 'Date of Entry', '120px'),
-  c('dateExpiry', 'Date of Expiry', '130px'),
+  c('dateEntered', 'Notification No.', '140px'),
+  c('dateExpiry', 'Notification Date', '140px'),
   c('namePS', 'Police Station', '120px'),
+  c('bailBondDetail', 'Bail Bond Detail', '160px'),
   c('remarks', 'Remarks', '200px'),
   sc('status', 'Status', '110px'),
+  c('diccDecision', 'DICC Decision', '160px'),
 ]
 
 export const fourthScheduleData = [

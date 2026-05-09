@@ -39,29 +39,32 @@ export const facilitatorFF = [
 export const headMoneyFF = [
   { key: 'name',       label: 'Name',            type: 'text',    required: true },
   { key: 'fatherName', label: "Father's Name",   type: 'text',    required: true },
-  { key: 'caste',      label: 'Caste',           type: 'select',  options: CASTES },
+  { key: 'caste',      label: 'Caste',           type: 'text' },
   { key: 'address',    label: 'Address',         type: 'text' },
   { key: 'crime',      label: 'Crime / Charges', type: 'text',    required: true },
   { key: 'firNo',      label: 'FIR No',          type: 'text' },
   { key: 'reward',     label: 'Reward (Rs.)',     type: 'text',    placeholder: '500,000', required: true },
   { key: 'announced',  label: 'Date Announced',  type: 'text',    placeholder: DATE_PH },
-  { key: 'namePS',     label: 'Police Station',  type: 'select',  options: PS },
+  { key: 'namePS',     label: 'Police Station',  type: 'text' },
   { key: 'status',     label: 'Status',          type: 'select',  options: GENERAL_STATUS },
+  { key: 'remarks',    label: 'Remarks',         type: 'textarea' },
 ]
 
 // ─── 4TH SCHEDULE ───────────────────────────────────────────
 export const fourthScheduleFF = [
-  { key: 'name',        label: 'Name',           type: 'text',   required: true },
-  { key: 'fatherName',  label: "Father's Name",  type: 'text',   required: true },
-  { key: 'caste',       label: 'Caste',          type: 'select', options: CASTES },
-  { key: 'address',     label: 'Address',        type: 'text' },
-  { key: 'cnic',        label: 'CNIC',           type: 'text',   placeholder: '12301-1234567-1' },
-  { key: 'section',     label: 'Section',        type: 'text',   placeholder: 'e.g. Sec 11-B ATA' },
-  { key: 'dateEntered', label: 'Date of Entry',  type: 'text',   placeholder: DATE_PH, required: true },
-  { key: 'dateExpiry',  label: 'Date of Expiry', type: 'text',   placeholder: DATE_PH },
-  { key: 'namePS',      label: 'Police Station', type: 'select', options: PS },
-  { key: 'remarks',     label: 'Remarks',        type: 'textarea' },
-  { key: 'status',      label: 'Status',         type: 'select', options: ['Active', 'Expired'] },
+  { key: 'name',           label: 'Name',              type: 'text',   required: true },
+  { key: 'fatherName',     label: "Father's Name",     type: 'text',   required: true },
+  { key: 'caste',          label: 'Caste',             type: 'text' },
+  { key: 'address',        label: 'Address',           type: 'text' },
+  { key: 'cnic',           label: 'CNIC',              type: 'text',   placeholder: '12301-1234567-1' },
+  { key: 'section',        label: 'Section',           type: 'text',   placeholder: 'e.g. Sec 11-B ATA' },
+  { key: 'dateEntered',    label: 'Notification No.',  type: 'text',   placeholder: DATE_PH, required: true },
+  { key: 'dateExpiry',     label: 'Notification Date', type: 'text',   placeholder: DATE_PH },
+  { key: 'namePS',         label: 'Police Station',    type: 'text' },
+  { key: 'bailBondDetail', label: 'Bail Bond Detail',  type: 'text' },
+  { key: 'remarks',        label: 'Remarks',           type: 'textarea' },
+  { key: 'status',         label: 'Status',            type: 'text' },
+  { key: 'diccDecision',   label: 'DICC Decision',     type: 'text' },
 ]
 
 // ─── CRO ────────────────────────────────────────────────────
@@ -168,6 +171,7 @@ export const armsFF = [
 export const userFF = [
   { key: 'name',       label: 'Full Name',     type: 'text',   required: true },
   { key: 'username',   label: 'Username',      type: 'text',   required: true },
+  { key: 'password',   label: 'Password',      type: 'text',   required: true, placeholder: '••••••••' },
   { key: 'role',       label: 'Role',          type: 'select', options: ['Administrator', 'Operator', 'Viewer'], required: true },
   { key: 'rank',       label: 'Rank',          type: 'select', options: ['SP', 'DSP', 'Inspector', 'Sub-Inspector', 'ASI', 'HC', 'Constable'] },
   { key: 'department', label: 'Department',    type: 'text',   placeholder: 'e.g. DSB Operations, Crime Branch' },

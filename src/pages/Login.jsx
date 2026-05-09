@@ -61,7 +61,7 @@ export default function Login() {
           <div className="text-white font-extrabold tracking-wide" style={{ fontSize: '28px', color: '#60a5fa' }}>
             DSB TANK
           </div>
-          <div className="text-gray-400 text-sm mt-1">District Special Branch — Tank</div>
+          <div className="text-gray-400 text-sm mt-1">District Security Branch — Tank</div>
         </div>
 
         {/* Form */}
@@ -140,7 +140,7 @@ export default function Login() {
       </div>
 
       <p className="text-blue-300 text-xs mt-6 opacity-60">
-        District Special Branch · Tank · Khyber Pakhtunkhwa
+        District Security Branch · Tank · Khyber Pakhtunkhwa
       </p>
     </div>
   )
