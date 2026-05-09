@@ -163,29 +163,16 @@ export default function Dashboard() {
               boxShadow: '0 8px 32px rgba(37,99,235,0.3)',
             }}
           >
-            {/* Officer silhouette */}
-            <svg viewBox="0 0 120 120" width="120" height="120" fill="none" xmlns="http://www.w3.org/2000/svg">
-              {/* Hat */}
-              <ellipse cx="60" cy="32" rx="26" ry="8" fill="#1e3a8a" />
-              <rect x="34" y="24" width="52" height="10" rx="2" fill="#1e3a8a" />
-              <rect x="42" y="20" width="36" height="8" rx="3" fill="#1e40af" />
-              {/* Hat badge */}
-              <circle cx="60" cy="22" r="4" fill="#fbbf24" />
-              <circle cx="60" cy="22" r="2.5" fill="#f59e0b" />
-              {/* Head */}
-              <ellipse cx="60" cy="50" rx="16" ry="18" fill="#fde68a" />
-              {/* Neck */}
-              <rect x="55" y="64" width="10" height="10" fill="#fde68a" />
-              {/* Uniform body */}
-              <path d="M30 110 Q30 75 55 72 L60 74 L65 72 Q90 75 90 110 Z" fill="#1e3a8a" />
-              {/* Epaulettes */}
-              <rect x="26" y="76" width="14" height="6" rx="2" fill="#1d4ed8" />
-              <rect x="80" y="76" width="14" height="6" rx="2" fill="#1d4ed8" />
-              {/* Medals */}
-              <circle cx="48" cy="90" r="3" fill="#fbbf24" />
-              <circle cx="56" cy="88" r="3" fill="#34d399" />
-              <circle cx="64" cy="90" r="3" fill="#f87171" />
-            </svg>
+            <img
+              src="/profile.jpeg"
+              alt="DPO Tank"
+              style={{
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover',
+                transform: 'scaleX(-1)',
+              }}
+            />
             {/* Watermark text */}
             <div
               className="absolute bottom-6 text-center font-semibold italic"
