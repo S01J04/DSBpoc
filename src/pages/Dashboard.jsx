@@ -173,12 +173,21 @@ export default function Dashboard() {
                 transform: 'scaleX(-1)',
               }}
             />
-            {/* Watermark text */}
+            {/* Name + title overlay */}
             <div
-              className="absolute bottom-6 text-center font-semibold italic"
-              style={{ color: '#fbbf24', fontSize: '13px', letterSpacing: '0.5px', textShadow: '0 1px 4px rgba(0,0,0,0.5)' }}
+              className="absolute bottom-0 left-0 right-0 text-center font-semibold"
+              style={{
+                background: 'rgba(0,0,0,0.45)',
+                padding: '6px 4px 8px',
+                textShadow: '0 1px 4px rgba(0,0,0,0.6)',
+              }}
             >
-              DPO Tank
+              <div style={{ color: '#ffffff', fontSize: '12px', fontWeight: 700, letterSpacing: '0.3px' }}>
+                Abdus Samad
+              </div>
+              <div style={{ color: '#fbbf24', fontSize: '11px', fontStyle: 'italic', letterSpacing: '0.5px' }}>
+                DPO Tank
+              </div>
             </div>
           </div>
         </div>
