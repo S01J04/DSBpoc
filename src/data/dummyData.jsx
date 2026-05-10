@@ -11,6 +11,7 @@ const sc = (key, label, width = '110px') => ({
 // ─────────────────────────────────────────────
 export const terroristColumns = [
   c('id', 'ID', '48px'),
+  { key: 'photo', label: 'Photo', width: '68px', render: v => v ? <img src={v} alt="" style={{ width: '38px', height: '38px', objectFit: 'cover', borderRadius: '4px', display: 'block' }} /> : '—' },
   c('category', 'Category', '130px'),
   c('name', 'Name', '170px'),
   c('fatherName', 'Father Name', '140px'),
@@ -71,6 +72,7 @@ export const searchThreatsData = terroristData.filter(r =>
 // ─────────────────────────────────────────────
 export const facilitatorColumns = [
   c('id', 'ID', '48px'),
+  { key: 'photo', label: 'Photo', width: '68px', render: v => v ? <img src={v} alt="" style={{ width: '38px', height: '38px', objectFit: 'cover', borderRadius: '4px', display: 'block' }} /> : '—' },
   c('name', 'Name', '160px'),
   c('fatherName', 'Father Name', '140px'),
   c('caste', 'Caste', '100px'),
@@ -103,6 +105,7 @@ export const facilitatorData = [
 // ─────────────────────────────────────────────
 export const headMoneyColumns = [
   c('id', 'ID', '48px'),
+  { key: 'photo', label: 'Photo', width: '68px', render: v => v ? <img src={v} alt="" style={{ width: '38px', height: '38px', objectFit: 'cover', borderRadius: '4px', display: 'block' }} /> : '—' },
   c('name', 'Name', '160px'),
   c('fatherName', 'Father Name', '140px'),
   c('caste', 'Caste', '100px'),
@@ -140,6 +143,7 @@ export const headMoneyData = [
 // ─────────────────────────────────────────────
 export const fourthScheduleColumns = [
   c('id', 'ID', '48px'),
+  { key: 'photo', label: 'Photo', width: '68px', render: v => v ? <img src={v} alt="" style={{ width: '38px', height: '38px', objectFit: 'cover', borderRadius: '4px', display: 'block' }} /> : '—' },
   c('name', 'Name', '160px'),
   c('fatherName', 'Father Name', '140px'),
   c('caste', 'Caste', '100px'),
@@ -175,6 +179,7 @@ export const fourthScheduleData = [
 // ─────────────────────────────────────────────
 export const croColumns = [
   c('id', 'ID', '48px'),
+  { key: 'photo', label: 'Photo', width: '68px', render: v => v ? <img src={v} alt="" style={{ width: '38px', height: '38px', objectFit: 'cover', borderRadius: '4px', display: 'block' }} /> : '—' },
   c('name', 'Name', '160px'),
   c('fatherName', 'Father Name', '140px'),
   c('caste', 'Caste', '100px'),
@@ -208,6 +213,7 @@ export const croData = [
 // ─────────────────────────────────────────────
 export const drugColumns = [
   c('id', 'ID', '48px'),
+  { key: 'photo', label: 'Photo', width: '68px', render: v => v ? <img src={v} alt="" style={{ width: '38px', height: '38px', objectFit: 'cover', borderRadius: '4px', display: 'block' }} /> : '—' },
   c('name', 'Name', '160px'),
   c('fatherName', 'Father Name', '140px'),
   c('caste', 'Caste', '100px'),
@@ -241,6 +247,7 @@ export const drugData = [
 // ─────────────────────────────────────────────
 export const snatcherColumns = [
   c('id', 'ID', '48px'),
+  { key: 'photo', label: 'Photo', width: '68px', render: v => v ? <img src={v} alt="" style={{ width: '38px', height: '38px', objectFit: 'cover', borderRadius: '4px', display: 'block' }} /> : '—' },
   c('name', 'Name', '160px'),
   c('fatherName', 'Father Name', '140px'),
   c('caste', 'Caste', '100px'),
@@ -272,6 +279,7 @@ export const snatcherData = [
 // ─────────────────────────────────────────────
 export const dacoitColumns = [
   c('id', 'ID', '48px'),
+  { key: 'photo', label: 'Photo', width: '68px', render: v => v ? <img src={v} alt="" style={{ width: '38px', height: '38px', objectFit: 'cover', borderRadius: '4px', display: 'block' }} /> : '—' },
   c('name', 'Name', '160px'),
   c('fatherName', 'Father Name', '140px'),
   c('caste', 'Caste', '100px'),

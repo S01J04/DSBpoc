@@ -20,7 +20,7 @@ import {
   dataEntryColumns, dataEntryData,
 } from './data/dummyData.jsx'
 import {
-  terroristFF, facilitatorFF, headMoneyFF, fourthScheduleFF,
+  terroristFF, threatFF, facilitatorFF, headMoneyFF, fourthScheduleFF,
   croFF, drugFF, snatcherFF, dacoitFF, firFF,
   moneyChangerFF, armsFF, userFF, dataEntryFF,
 } from './data/formFields.jsx'
@@ -47,15 +47,16 @@ export default function App() {
           <Route path="/" element={<ProtectedRoute><Layout /></ProtectedRoute>}>
             <Route index element={<Dashboard />} />
 
-            {/* Search pages — read-only, share terrorist storage */}
+            {/* Search pages — share terrorist storage */}
             <Route path="search-dsb" element={
-              <P title="Search DSB Reports" columns={terroristColumns} data={terroristData} storageKey="dsb_terrorists" />
+              <P title="Search DSB Reports" columns={terroristColumns} data={terroristData} formFields={terroristFF} storageKey="dsb_terrorists" />
             } />
             <Route path="search-threats" element={
               <P
                 title="Search Threats"
                 columns={terroristColumns}
                 data={terroristData}
+                formFields={threatFF}
                 storageKey="dsb_terrorists"
                 filter={r => r.category === 'Specific Threat' || r.category === 'General Threat'}
               />

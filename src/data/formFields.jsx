@@ -6,6 +6,7 @@ const DATE_PH = 'DD/MM/YYYY'
 
 // ─── TERRORISTS LIST ────────────────────────────────────────
 export const terroristFF = [
+  { key: 'photo',            label: 'Photo',             type: 'image' },
   { key: 'category',         label: 'Category',          type: 'select',   options: ['Specific Threat', 'General Threat', 'New'], required: true },
   { key: 'name',             label: 'Name',              type: 'text',     required: true },
   { key: 'fatherName',       label: "Father's Name",     type: 'text' },
@@ -21,8 +22,16 @@ export const terroristFF = [
   { key: 'presentStatus',    label: 'Present Status',    type: 'select',   options: GENERAL_STATUS },
 ]
 
+// ─── THREATS (Specific / General only) ─────────────────────
+export const threatFF = terroristFF.map(f =>
+  f.key === 'category'
+    ? { ...f, options: ['Specific Threat', 'General Threat'] }
+    : f
+)
+
 // ─── TS FACILITATORS ────────────────────────────────────────
 export const facilitatorFF = [
+  { key: 'photo',      label: 'Photo',             type: 'image' },
   { key: 'name',       label: 'Name',              type: 'text',     required: true },
   { key: 'fatherName', label: "Father's Name",     type: 'text',     required: true },
   { key: 'caste',      label: 'Caste',             type: 'select',   options: CASTES },
@@ -37,6 +46,7 @@ export const facilitatorFF = [
 
 // ─── HEAD MONEY ─────────────────────────────────────────────
 export const headMoneyFF = [
+  { key: 'photo',      label: 'Photo',           type: 'image' },
   { key: 'name',       label: 'Name',            type: 'text',    required: true },
   { key: 'fatherName', label: "Father's Name",   type: 'text',    required: true },
   { key: 'caste',      label: 'Caste',           type: 'text' },
@@ -52,6 +62,7 @@ export const headMoneyFF = [
 
 // ─── 4TH SCHEDULE ───────────────────────────────────────────
 export const fourthScheduleFF = [
+  { key: 'photo',          label: 'Photo',             type: 'image' },
   { key: 'name',           label: 'Name',              type: 'text',   required: true },
   { key: 'fatherName',     label: "Father's Name",     type: 'text',   required: true },
   { key: 'caste',          label: 'Caste',             type: 'text' },
@@ -69,6 +80,7 @@ export const fourthScheduleFF = [
 
 // ─── CRO ────────────────────────────────────────────────────
 export const croFF = [
+  { key: 'photo',      label: 'Photo',           type: 'image' },
   { key: 'name',       label: 'Name',            type: 'text',   required: true },
   { key: 'fatherName', label: "Father's Name",   type: 'text',   required: true },
   { key: 'caste',      label: 'Caste',           type: 'select', options: CASTES },
@@ -84,6 +96,7 @@ export const croFF = [
 
 // ─── DRUG PEDDLERS ──────────────────────────────────────────
 export const drugFF = [
+  { key: 'photo',       label: 'Photo',          type: 'image' },
   { key: 'name',        label: 'Name',           type: 'text',   required: true },
   { key: 'fatherName',  label: "Father's Name",  type: 'text',   required: true },
   { key: 'caste',       label: 'Caste',          type: 'select', options: CASTES },
@@ -98,6 +111,7 @@ export const drugFF = [
 
 // ─── SNATCHERS ──────────────────────────────────────────────
 export const snatcherFF = [
+  { key: 'photo',        label: 'Photo',          type: 'image' },
   { key: 'name',         label: 'Name',           type: 'text',   required: true },
   { key: 'fatherName',   label: "Father's Name",  type: 'text',   required: true },
   { key: 'caste',        label: 'Caste',          type: 'select', options: CASTES },
@@ -112,6 +126,7 @@ export const snatcherFF = [
 
 // ─── DACOIT / ROBBERS ───────────────────────────────────────
 export const dacoitFF = [
+  { key: 'photo',        label: 'Photo',          type: 'image' },
   { key: 'name',         label: 'Name',           type: 'text',     required: true },
   { key: 'fatherName',   label: "Father's Name",  type: 'text',     required: true },
   { key: 'caste',        label: 'Caste',          type: 'select',   options: CASTES },

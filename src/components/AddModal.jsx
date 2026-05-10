@@ -62,7 +62,7 @@ export default function AddModal({ title, fields, onAdd, onClose }) {
             {fields.map(f => (
               <div
                 key={f.key}
-                style={{ gridColumn: f.type === 'textarea' ? '1 / -1' : 'span 1' }}
+                style={{ gridColumn: (f.type === 'textarea' || f.type === 'image') ? '1 / -1' : 'span 1' }}
               >
                 <label style={{
                   display: 'block', fontSize: '12px', fontWeight: 600,
@@ -97,6 +97,35 @@ export default function AddModal({ title, fields, onAdd, onClose }) {
                       outline: 'none', resize: 'vertical', boxSizing: 'border-box',
                     }}
                   />
+                ) : f.type === 'image' ? (
+                  <div>
+                    <input
+                      type="file"
+                      accept="image/*"
+                      onChange={e => {
+                        const file = e.target.files[0]
+                        if (!file) return
+                        const reader = new FileReader()
+                        reader.onload = ev => set(f.key, ev.target.result)
+                        reader.readAsDataURL(file)
+                      }}
+                      style={{
+                        width: '100%', fontSize: '12.5px', padding: '5px 0',
+                        border: errors[f.key] ? '1.5px solid #dc2626' : 'none', outline: 'none',
+                      }}
+                    />
+                    {form[f.key] && (
+                      <img
+                        src={form[f.key]}
+                        alt="preview"
+                        style={{
+                          marginTop: '8px', width: '90px', height: '90px',
+                          objectFit: 'cover', borderRadius: '6px',
+                          border: '1px solid #d1d5db',
+                        }}
+                      />
+                    )}
+                  </div>
                 ) : (
                   <input
                     type={f.type || 'text'}
